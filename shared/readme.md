@@ -13,11 +13,29 @@ npm init -y
 npm install express cors dotenv helmet
 npm install -D nodemon @types/node
 
+nest new auth-app
+cd auth-app
+npm install @nestjs/mongoose mongoose @nestjs/jwt @nestjs/passport passport-jwt bcryptjs
+npm install --save-dev @types/bcryptjs @types/passport-jwt
+
 # Setup database connection
-npm install redis-driver mongodb
+npm install mongodb redis
 
 
-
-# Setup database connection for nestjs
+# Setup MongoDB database connection for nestjs
 npm install @nestjs/mongoose
 npm install -D @types/mongoose
+
+# Setup Postgresql database connection for nestjs
+npm install @prisma/client prisma
+
+# Initialize database
+npx prisma init
+
+
+
+
+
+
+# Using Redis as a Cache for MongoDB with Node.js
+https://medium.com/@na.mazaheri/using-redis-as-a-cache-for-mongodb-with-node-js-aaf303cfb513
